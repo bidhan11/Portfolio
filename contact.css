@@ -1,0 +1,223 @@
+body{
+    background-color: black;
+    font-family: 'Source Code Pro', monospace;
+    overflow:  hidden;
+}
+p{
+    color:white;
+    font-size: 30px;
+}
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    background:transparent;
+    justify-content:space-between;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.box{
+    text-decoration: none;
+    background: transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(217, 157, 236);
+    margin: 0 11px;
+}
+.box:hover{
+    border: 0;
+    box-shadow:0 0 3px #cf3eff, 0 0 7px #cf3eff,0 0 20px #cf3eff;
+}
+.box.active{
+    border: 0;
+    box-shadow:0 0 3px #f550c1, 0 0 7px #f550c1,0 0 20px #f550c1;
+}
+.rotate{
+    animation: test 5s infinite linear;
+    border-radius: 130%;
+}
+@keyframes test {
+    100% {transform: rotate(360deg);}
+    
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #942bb7;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@keyframes wave{
+    from, to{
+        transform: translate(-50%,0%);
+    }
+    50%{
+        transform: translate(-50%,-20%);
+    }
+}
+#bubble-wrapper {
+    height: 100%;
+    width:100% ;
+    position: fixed;
+    bottom: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.bubble{
+    height: max(300px,30vw);
+    width: max(300px,30vw);
+    background: linear-gradient(91.1deg, rgb(57, 31, 105) -2.3%, rgb(115, 43, 155) 44.4%, rgb(231, 75, 184) 103.4%);
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top:100%;
+    animation:wave 2s ease-in-out infinite;
+}
+.name{
+    background-color: rgb(169, 132, 238);
+    font-size: 52px;
+	-webkit-background-clip: text;
+    background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
+.text {
+    margin-left:12%;
+	background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
+	-webkit-background-clip: text;
+    background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
+.horizontal{
+    border-bottom: 2px solid#c65fe8;
+    height: 300px;
+    position: absolute;
+    padding-left: 29%;
+    bottom:73%;
+}
+form{
+    background: rgba(27,31,34,0.80);
+    width: 640px;
+    margin:auto;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 5px 70px;
+  }
+  
+form .half{
+    display: flex;
+    justify-content:center;
+  }
+form .half .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    margin-left:50px;
+    width: 50%;
+  }
+  
+form label{
+    color:#c65fe8;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+    margin-left: 10%;
+  }
+  
+form .half .item input{
+    border-radius: 4px;
+    border: 1px solid white;
+    color:#dea7cd;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    font-size: 17px;
+  }
+  
+form .full{
+    margin-bottom: 24px;
+  }
+form .full textarea{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: #dbacea;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+  }
+  
+form .action{
+    margin-bottom: 32px;
+}
+  
+form .action input{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+  }
+form .action input[type="submit"]{
+    background:#cf3eff;
+    color:#f8ceeb}
+form .action input[type="reset"]{
+        background:transparent;
+        color:#c65fe8}
+form .icons{
+    margin-left: 64%;
+    margin-top: -6%;
+}
+form .icons a{
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    width: 38px;
+    margin-right: 10px;
+  }
+  
+form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+    background: rgba(255,255,255,0.075);
+  }
+.circle{
+    position: absolute;
+    width: 300px;
+    border: 1px solid;
+    background: #c65fe8;
+    height: 300px;
+    z-index: -5;
+    left: 30vh;
+    top:95px;
+    border-radius: 50%; 
+}
+.small{
+    position: absolute;
+    width: 200px;
+    border: 1px solid;
+    background: black;
+    height: 200px;
+    z-index: -5;
+    left: 6vh;
+    top:50px;
+    border-radius: 50%; 
+}

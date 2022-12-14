@@ -1,0 +1,133 @@
+body{
+    background-color: black;
+    font-family: 'Source Code Pro', monospace;
+    overflow:  hidden;
+}
+p{
+    color:white;
+    font-size: 30px;
+}
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    background:transparent;
+    justify-content:space-between;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.box{
+    text-decoration: none;
+    background: transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(217, 157, 236);
+    margin: 0 11px;
+}
+.box:hover{
+    border: 0;
+    box-shadow:0 0 3px #cf3eff, 0 0 7px #cf3eff,0 0 20px #cf3eff;
+}
+.box.active{
+    border: 0;
+    box-shadow:0 0 3px #f550c1, 0 0 7px #f550c1,0 0 20px #f550c1;
+}
+.rotate{
+    animation: test 5s infinite linear;
+    border-radius: 130%;
+}
+@keyframes test {
+    100% {transform: rotate(360deg);}
+    
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #942bb7;
+}
+.for--position{
+    padding-top: 80px;
+    padding-left: 20px;
+}
+.bi--photo{
+    border:4px solid #C147E9;
+    box-shadow:0 0 2px #c568a7, 0 0 2px #c568a7,0 0 15px #c568a7;
+    height: 500px;
+    border-radius: 50%;
+    width:500px;
+}
+.vertical1{
+    border-left: 4px solid #C147E9;
+    height: 150px;
+    position: relative;
+    left: 19%;
+}  
+.horizontal{
+    border-bottom: 2px solid#c65fe8;
+    height: 300px;
+    position: absolute;
+    padding-left: 29%;
+    top: 5%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text {
+    margin-left:5%;
+    margin-top: 9%;
+	background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
+	-webkit-background-clip: text;
+    background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
+h2{
+    font-size: 20px;
+    padding-right: 200px;
+    background: radial-gradient(250px at 10.9% 48.6%, rgb(194, 227, 255) 39.3%, rgb(226, 196, 253) 72.5%);
+	-webkit-background-clip: text;
+    background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
+@keyframes wave{
+    from, to{
+        transform: translate(-50%,0%);
+    }
+    50%{
+        transform: translate(-50%,-20%);
+    }
+}
+#bubble-wrapper {
+    height: 100%;
+    width:100% ;
+    position: fixed;
+    bottom: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.bubble{
+    height: max(300px,30vw);
+    width: max(300px,30vw);
+    background: linear-gradient(91.1deg, rgb(57, 31, 105) -2.3%, rgb(115, 43, 155) 44.4%, rgb(231, 75, 184) 103.4%);
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top:100%;
+    animation:wave 2s ease-in-out infinite;
+}
+
+.box{
+    text-decoration: none;
+}
+.name{
+    background-color: rgb(169, 132, 238);
+    font-size: 52px;
+	-webkit-background-clip: text;
+    background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
